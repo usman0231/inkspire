@@ -71,7 +71,7 @@ export default function BlogPage() {
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-2 h-2 bg-flame-orange rounded-full"></div>
-              <p className="text-flame-orange text-sm font-semibold tracking-[0.2em] uppercase">OUR BLOG</p>
+              <p className="text-flame-orange text-3xl font-semibold tracking-[0.2em] uppercase">OUR BLOG</p>
             </div>
 
             <h1 className="text-6xl md:text-8xl font-black text-warm-white leading-[0.9] tracking-tight">
@@ -83,7 +83,7 @@ export default function BlogPage() {
               </span>
             </h1>
 
-            <p className="text-warm-white/70 text-lg mt-8 max-w-2xl leading-relaxed">
+            <p className="text-warm-white text-lg mt-8 max-w-2xl leading-relaxed">
               Discover the latest trends, insights, and innovations in design and digital marketing. Stay ahead with our
               expert perspectives and industry updates.
             </p>
