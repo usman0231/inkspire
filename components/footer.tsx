@@ -19,8 +19,8 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-xl font-semibold text-warm-white mb-6">Say Hello</h3>
             <div className="space-y-4">
-              <p className="text-warm-white/80">hello@design.com</p>
-              <p className="text-2xl font-bold text-warm-white">+1 840 841 25 69</p>
+              <p className="text-warm-white/80">info@inkspirefolio.com</p>
+              <p className="text-2xl font-bold text-warm-white">+1 3136127389</p>
             </div>
           </div>
 
@@ -73,8 +73,8 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-warm-white/20">
           <div className="mb-4 md:mb-0 flex items-center">
-            <div className="bg-warm-white rounded-lg p-2 mr-3">
-              <Image src="/inkspire-logo.jpeg" alt="Inkspire Folio" width={120} height={40} className="h-15 w-auto" />
+            <div className="rounded-lg p-2 mr-3">
+              <Image src="/logo-06.png" alt="Inkspire Folio" width={120} height={40} className="h-15 w-auto" />
             </div>
           </div>
           <div className="text-sm text-warm-white/60">

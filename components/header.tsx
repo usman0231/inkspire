@@ -148,7 +148,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <Image src="/inkspire-logo.jpeg" alt="Inkspire Folio" width={180} height={60} className="h-14 w-auto" />
+              <Image src="/logo-10.png" alt="Inkspire Folio" width={180} height={60} className="h-14 w-auto" />
             </div>
 
             {/* Desktop Navigation */}
