@@ -33,7 +33,7 @@ export default function RootLayout({
       <head>
         <script src="https://cdn.lordicon.com/lordicon.js"></script>
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased bg-[var(--charcoal-gray)]">{children}</body>
     </html>
   )
 }

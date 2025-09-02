@@ -43,7 +43,7 @@ export default function Header() {
                         src="https://cdn.lordicon.com/rljrflzd.json"
                         trigger="loop"
                         delay="2000"
-                        colors="primary:#d35400,secondary:#2C2C2C"
+                        colors="primary:#2C2C2C,secondary:#2C2C2C"
                         style={{ width: "60px", height: "60px" }}
                     ></lord-icon>,
       href: "/services/logo-design",
@@ -54,9 +54,10 @@ export default function Header() {
                         src="https://cdn.lordicon.com/pkvlegzp.json"
                         trigger="loop"
                         delay="2000"
-                        colors="primary:#d35400,secondary:#2C2C2C"
+                        colors="primary:#2C2C2C,secondary:#2C2C2C"
                         style={{ width: "60px", height: "60px" }}
-                    ></lord-icon>
+                    ></lord-icon>,
+      href: "/services/branding",
      },
     {
       name: "Web design & development",
@@ -65,9 +66,10 @@ export default function Header() {
                         src="https://cdn.lordicon.com/ailnzwyn.json"
                         trigger="loop"
                         delay="2000"
-                        colors="primary:#d35400,secondary:#2C2C2C"
+                        colors="primary:#2C2C2C,secondary:#2C2C2C"
                         style={{ width: "60px", height: "60px" }}
                     ></lord-icon>,
+      href: "/services/web",              
     },
     { name: "Video animation",
       description: "Bringing your message to life with animation",
@@ -75,9 +77,10 @@ export default function Header() {
                         src="https://cdn.lordicon.com/ugllxeyl.json"
                         trigger="loop"
                         delay="2000"
-                        colors="primary:#d35400,secondary:#2C2C2C"
+                        colors="primary:#2C2C2C,secondary:#2C2C2C"
                         style={{ width: "60px", height: "60px" }}
-                    ></lord-icon>
+                    ></lord-icon>,
+      href: "/services/animation",
      },
     {
       name: "Business marketing",
@@ -86,9 +89,10 @@ export default function Header() {
                         src="https://cdn.lordicon.com/lbcxnxti.json"
                         trigger="loop"
                         delay="2000"
-                        colors="primary:#d35400,secondary:#2C2C2C"
+                        colors="primary:#2C2C2C,secondary:#2C2C2C"
                         style={{ width: "60px", height: "60px" }}
                     ></lord-icon>,
+      href: "/services/business",
     },
     { name: "Social Media",
       description: "Promote your brand across a variety of platforms",
@@ -96,20 +100,22 @@ export default function Header() {
                         src="https://cdn.lordicon.com/hmabmtlg.json"
                         trigger="loop"
                         delay="2000"
-                        colors="primary:#d35400,secondary:#2C2C2C"
+                        colors="primary:#2C2C2C,secondary:#2C2C2C"
                         style={{ width: "60px", height: "60px" }}
-                    ></lord-icon>
+                    ></lord-icon>,
+      href: "/services/social",
     },
     {
-      name: "Book Cover Design",
+      name: "Video Editing",
       description: "A cover design that transforms stories into stunning books",
       icon: <lord-icon
                         src="https://cdn.lordicon.com/rrbmabsx.json"
                         trigger="loop"
                         delay="2000"
-                        colors="primary:#d35400,secondary:#2C2C2C"
+                        colors="primary:#2C2C2C,secondary:#2C2C2C"
                         style={{ width: "60px", height: "60px" }}
                     ></lord-icon>,
+      href: "/services/video_editing",
     },
     { name: "Book Writing",
       description: "Professional Book Writing Turns Your Vision into Words",
@@ -117,16 +123,28 @@ export default function Header() {
                         src="https://cdn.lordicon.com/fikcyfpp.json"
                         trigger="loop"
                         delay="2000"
-                        colors="primary:#d35400,secondary:#2C2C2C"
+                        colors="primary:#2C2C2C,secondary:#2C2C2C"
                         style={{ width: "60px", height: "60px" }}
-                    ></lord-icon>
+                    ></lord-icon>,
+      href: "/services/content_writing",
+    },
+    { name: "Book Cover Design",
+      description: "Professional Book Writing Turns Your Vision into Words",
+      icon: <lord-icon
+                        src="https://cdn.lordicon.com/fikcyfpp.json"
+                        trigger="loop"
+                        delay="2000"
+                        colors="primary:#2C2C2C,secondary:#2C2C2C"
+                        style={{ width: "60px", height: "60px" }}
+                    ></lord-icon>,
+      href: "/services/book_cover",
     },
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 py-3">
+    <header className="fixed top-0 left-0 right-0 z-50 px-3 md:px-18 py-3">
       <div className="container mx-auto">
-        <div className="bg-warm-white rounded-2xl px-6 py-4 shadow-lg">
+        <div className="bg-[var(--charcoal-gray)] rounded-2xl px-6 py-4 shadow-lg">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
@@ -141,24 +159,24 @@ export default function Header() {
                     <div className="relative" ref={dropdownRef}>
                       <button
                         onClick={() => setIsServicesOpen(!isServicesOpen)}
-                        className="text-sm font-medium text-ink-black hover:text-flame-orange transition-colors flex items-center gap-1 cursor-pointer"
+                        className="text-sm font-medium text-[var(--warm-white)] hover:text-flame-orange transition-colors flex items-center gap-1 cursor-pointer"
                       >
                         {item.name}
                         <ChevronDown size={16} />
                       </button>
 
                       {isServicesOpen && (
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[800px] bg-warm-white rounded-2xl shadow-xl border border-gray-100 p-6 z-50">
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[800px] bg-[var(--charcoal-gray)] rounded-2xl shadow-xl borde p-6 z-50">
                           <div className="grid grid-cols-3 gap-4">
                             {services.map((service, index) => (
                               <a
                                 key={service.name}
                                 href={service.href || "#"}
-                                className="p-4 rounded-xl border border-flame-orange hover:border-[#2c2c2c] transition-colors cursor-pointer group blockk"
+                                className="p-4 rounded-xl border border-flame-orange hover:border-[#2c2c2c] transition-colors cursor-pointer group blockk bg-[var(--warm-white)] hover:bg-[var(--flame-orange)]"
                                 onClick={() => setIsServicesOpen(false)}
                               >
                                 <div className="text-flame-orange text-2xl mb-2">{service.icon}</div>
-                                <h3 className="font-semibold text-ink-black mb-2 group-hover:text-flame-orange transition-colors">
+                                <h3 className="font-semibold text-charcoal-gray mb-2 group-hover:text-flame-orange transition-colors">
                                   {service.name}
                                 </h3>
                                 <p className="text-sm text-charcoal-gray leading-relaxed">{service.description}</p>
@@ -169,7 +187,7 @@ export default function Header() {
                       )}
                     </div>
                   ) : (
-                    <a href={item.href} className="text-sm font-medium text-ink-black hover:text-flame-orange">
+                    <a href={item.href} className="text-sm font-medium text-[var(--warm-white)] hover:text-flame-orange">
                       {item.name}
                     </a>
                   )}
@@ -179,7 +197,7 @@ export default function Header() {
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-ink-black hover:text-flame-orange">
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-[var(--warm-white)] hover:text-flame-orange">
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
@@ -195,7 +213,7 @@ export default function Header() {
                       <div>
                         <button
                           onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                          className="w-full flex items-center justify-between px-3 py-2 text-sm font-medium text-ink-black hover:text-flame-orange rounded-lg hover:bg-flame-orange/5"
+                          className="w-full flex items-center justify-between px-3 py-2 text-sm font-medium text-[var(--warm-white)] hover:text-flame-orange rounded-lg hover:bg-flame-orange/5"
                         >
                           {item.name}
                           <ChevronDown
@@ -206,12 +224,12 @@ export default function Header() {
 
                         {/* Mobile Services Dropdown */}
                         {isMobileServicesOpen && (
-                          <div className="mt-2 ml-4 space-y-2">
+                          <div className="mt-2 ml-4 space-y-2 overflow-y-auto max-h-60">
                             {services.map((service) => (
                               <a
                                 key={service.name}
                                 href={service.href || "#"}
-                                className="flex items-start gap-3 px-3 py-2 text-sm text-ink-black hover:text-flame-orange rounded-lg hover:bg-flame-orange/5"
+                                className="flex items-start gap-3 px-3 py-2 text-sm text-[var(--warm-white)] hover:text-flame-orange rounded-lg hover:bg-flame-orange/5"
                                 onClick={() => {
                                   setIsMenuOpen(false)
                                   setIsMobileServicesOpen(false)
@@ -230,7 +248,7 @@ export default function Header() {
                     ) : (
                       <a
                         href={item.href}
-                        className="block px-3 py-2 text-sm font-medium text-ink-black hover:text-flame-orange rounded-lg hover:bg-flame-orange/5"
+                        className="block px-3 py-2 text-sm font-medium text-[var(--warm-white)] hover:text-flame-orange rounded-lg hover:bg-flame-orange/5"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.name}

@@ -12,10 +12,9 @@ function progress() {
         />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">A Comprehensive Look at Our Work Process</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">From Concept to Completion</h2>
             <p className="text-lg text-warm-white/80 max-w-3xl mx-auto">
-              Experience Our Design Journey: Our work approach emphasizes top-notch work, teamwork, and attention to
-              detail, ensuring each project exceeds expectations.
+              We manage every phase with professionalism and precision, making sure each project not only meets but surpasses client expectations.
             </p>
           </div>
 
@@ -37,8 +36,7 @@ function progress() {
                 </div>
                 <h3 className="text-xl font-semibold">Design Brief</h3>
                 <p className="text-sm text-warm-white/80 leading-relaxed">
-                  Our design brief outlines your vision and project goals, ensuring a clear direction for our
-                  collaboration.
+                   We start by gathering insights into your goals, vision, and brand requirements. This step ensures clarity, alignment, and a strong foundation for the project.
                 </p>
               </div>
 
@@ -54,9 +52,9 @@ function progress() {
                     2
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold">Sketch</h3>
+                <h3 className="text-xl font-semibold">Concept Development</h3>
                 <p className="text-sm text-warm-white/80 leading-relaxed">
-                  In this step, we translate your vision into initial design sketches for further directions.
+                  Our team translates your vision into well-structured design concepts, providing creative directions that reflect both innovation and strategy.
                 </p>
               </div>
 
@@ -72,9 +70,9 @@ function progress() {
                     3
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold">Revision</h3>
+                <h3 className="text-xl font-semibold">Refinement</h3>
                 <p className="text-sm text-warm-white/80 leading-relaxed">
-                  In this step, we translate your vision into initial design sketches for further directions.
+                 With your feedback, we fine-tune the designs, perfecting details and ensuring the final outcome aligns seamlessly with your brand identity.
                 </p>
               </div>
 
@@ -92,7 +90,7 @@ function progress() {
                 </div>
                 <h3 className="text-xl font-semibold">Final Delivery</h3>
                 <p className="text-sm text-warm-white/80 leading-relaxed">
-                  After approval, we ensure delivery of polished designs, ready for implementation.
+                  After thorough review and quality checks, we deliver professionally polished designs — ready for implementation across your desired platforms.
                 </p>
               </div>
             </div>

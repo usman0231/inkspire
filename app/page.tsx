@@ -14,52 +14,52 @@ export default function HomePage() {
 
   const services = [
     {
-      icon: "https://globaldesignsagency.com/assets/images/branding.webp",
+      icon: "/icons/1.png",
       title: "Branding",
       description:
-        "Discover the essence of your brand with our design website. Join forces with us to create a standout identity that deeply connects with your audience. Together, let's transform your vision into reality.",
+        "Discover the core of your brand with Inkspirefolio, a creative design agency crafting bold, strategic identities that stand out. From Toronto to Washington D.C., we transform ideas into impactful brand experiences that connect and inspire. Whether you're starting fresh or rebranding, we bring clarity, creativity, and purpose to every step of the journey.",
     },
     {
-      icon: "https://globaldesignsagency.com/assets/images/logo-design.webp",
+      icon: "/icons/2.png",
       title: "Logo Design",
       description:
-        "Designing logos that capture your brand's essence is our specialty. Let's collaborate to create one that not only stands out but also speaks volumes about your brand. Enhance your brand's identity and leave a lasting impression with our expert design services.",
+        "At Inkspirefolio, we design logos that do more than look good — they speak your brand’s truth. With a team of expert creatives, our agency blends strategy and artistry to craft bold, timeless identities. From Toronto to DC and beyond, we help brands leave lasting impressions through purposeful, professional design.",
     },
     {
-      icon: "https://globaldesignsagency.com/assets/images/social-media.webp",
+      icon: "/icons/3.png",
       title: "Social Media",
       description:
-        "Dive into social media with us. Our expert team crafts engaging content to spark conversations and drive your brand forward. Together, let's cultivate a loyal community and elevate your brand's impact online.",
+        "At Inkspirefolio, we turn scrolls into connections and clicks into conversations. Our expert team — from Toronto to DC — crafts compelling social media content that builds trust, sparks engagement, and grows authentic communities. With strategy, creativity, and a deep understanding of digital culture, we help your brand not just show up online — but stand out.",
     },
     {
-      icon: "https://globaldesignsagency.com/assets/images/Web%20Design-Development.webp",
+      icon: "/icons/4.png",
       title: "Web Design And Development",
       description:
-        "Explore our design website for cutting-edge web design and development. Together, let's craft a digital platform that speaks volumes about your brand and captivates your audience. Ready to make your mark online?",
+        "At Inkspirefolio, we believe your website should do more than exist — it should perform. Our design agency team, from Toronto to DC, specializes in crafting immersive, responsive, and conversion-driven web experiences. Blending aesthetic excellence with seamless functionality, we design and develop digital spaces that captivate visitors and elevate your brand.",
     },
     {
-      icon: "https://globaldesignsagency.com/assets/images/Animated-Video.webp",
-      title: "Animated Video",
+      icon: "/icons/5.png",
+      title: "Animation",
       description:
-        "Explore animated video with our design website. We specialize in crafting captivating visuals that breathe life into your story. Let's collaborate to create an unforgettable animated experience for your brand.",
+        "At InkspireFolio, we bring ideas to life through dynamic animations that captivate, explain, and engage. Our creative animation team blends storytelling with motion design to transform complex concepts into clear and visually stunning experiences. From explainer videos and social media content to brand campaigns and product showcases, we craft animations that not only grab attention but also resonate with your audience and elevate your brand presence.",
     },
     {
-      icon: "https://globaldesignsagency.com/assets/images/Brand-Marketing.webp",
-      title: "Brand Marketing",
+      icon: "/icons/6.png",
+      title: "Video Editing",
       description:
-        "Explore brand marketing with our design website. From strategic campaigns to engaging content, we'll enhance your brand's visibility and resonance. Let's collaborate on a tailored strategy to propel your brand forward online.",
+        "At Inkspirefolio, we turn raw footage into compelling visual stories that connect, inspire, and convert. Our expert video editing team blends cinematic precision with brand storytelling to craft content that leaves a lasting impact. Whether it's for social media, brand campaigns, or promotional materials, we shape every frame to reflect your vision and elevate your message.",
     },
     {
-      icon: "https://globaldesignsagency.com/assets/images/book-design.webp",
+      icon: "/icons/7.png",
       title: "Book Cover Design",
       description:
-        "Trust us with the visual representation of your literary masterpiece. Our talented designers will create a stunning cover that captures the essence of your book and compels readers to explore its pages. Let's work together to make your book stand out on the shelves and leave a lasting impression on your audience.",
+        "At InkspireFolios, we design book covers that do more than just protect pages — they tell a story at first glance. Our team combines striking visuals, typography, and layout design to create covers that capture the essence of your work and spark curiosity in readers. Whether it’s fiction, non-fiction, or professional publications, we craft designs that reflect your voice, connect with your audience, and give your book the unforgettable presence it deserves.",
     },
     {
-      icon: "https://globaldesignsagency.com/assets/images/book-writing.webp",
+      icon: "/icons/8.png",
       title: "Book Writing",
       description:
-        "Allow our experienced team to walk you through the process of bringing your book to life. From refining your ideas to creating compelling narratives, we are here to help you turn your vision into a captivating story. Join us on this exciting journey toward making your dreams of becoming an author a reality.",
+        "At InkspireFolios, we transform ideas into powerful words that inform, inspire, and connect. Our professional book writing services help authors, thought leaders, and businesses bring their stories and expertise to life with clarity and creativity. From concept development and structured outlines to polished manuscripts, we ensure every chapter reflects your voice and vision. Whether it’s a memoir, business guide, or creative fiction, we craft compelling narratives that leave a lasting impact on readers.",
     },
   ]
 
@@ -226,24 +226,26 @@ export default function HomePage() {
   })
 
   return (
-    <div className="min-h-screen bg-warm-white">
+    <div className="min-h-screen bg-[var(--charcoal-gray)]">
       <Header />
 
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(/simple-banner-background.webp)" }}
-        />
+          className="absolute inset-0 bg-center bg-no-repeat flex flex-col items-center justify-center"
+          style={{ backgroundImage: "url(/home_page/banner.jpg)", backgroundSize: "100% 100%"  }}
+        >
+          <h1 className="text-warm-white text-3xl md:text-6xl font-bold">Design a Digital Identity That Reflects You</h1>
+        </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-warm-white">
+      <section id="services" className="py-20 bg-[var(--charcoal-gray)]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-ink-black mb-4">
-              Your One Stop Shop For All Creative Solutions
+            <h2 className="text-3xl lg:text-4xl font-bold text-warm-white mb-4">
+              One Destination. Infinite Creative Possibilities
             </h2>
           </div>
 
@@ -289,13 +291,12 @@ export default function HomePage() {
       <Progress/>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-warm-white">
+      <section id="portfolio" className="py-20 bg-[var(--charcoal-gray)]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-ink-black mb-4">Check Out Our Most Recent Designs</h2>
-            <p className="text-lg text-charcoal-gray max-w-3xl mx-auto">
-              Browse through our latest design projects, demonstrating our commitment to creativity, innovation, and
-              client satisfaction.
+            <h2 className="text-3xl lg:text-4xl font-bold text-warm-white mb-4">Elevating Brands Through Design</h2>
+            <p className="text-lg text-warm-white max-w-3xl mx-auto">
+              Explore how our recent work combines creativity and strategy to deliver designs that stand out and connect.
             </p>
           </div>
 
@@ -428,12 +429,12 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 bg-warm-white">
+      <section id="contact" className="py-20 bg-[var(--charcoal-gray)]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-ink-black">We'd love to hear your feedback!</h2>
-              <p className="text-lg text-charcoal-gray leading-relaxed">
+              <h2 className="text-3xl lg:text-4xl font-bold text-flame-orange">We'd love to hear your feedback!</h2>
+              <p className="text-lg text-warm-white leading-relaxed">
                 We listen, you <span className="text-flame-orange font-semibold">lead</span>. Ready to create? We are
                 available at your service 24/7. Let's chat! Call us at:{" "}
                 <span className="font-semibold">172-038-63784</span>
