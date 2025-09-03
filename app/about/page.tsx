@@ -14,7 +14,7 @@ export default function AboutPage() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(https://globaldesignsagency.com/assets/images/services/About.png)" }}
+          style={{ backgroundImage: "url(/about/banner.jpg)" }}
         />
         {/* Orange gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-flame-orange/80 to-flame-orange/60"></div>
@@ -22,12 +22,10 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-6xl font-bold text-warm-white mb-6">
-              We're Passionate About <span className="text-warm-white">Design</span>
+              Driven by Creative Excellence
             </h1>
             <p className="text-lg lg:text-xl text-warm-white/90 leading-relaxed text-white">
-              With an unwavering passion for creativity and innovation, we go above and beyond to provide stellar design
-              solutions. We are committed to each client's specific needs. From concept to execution, we put our heart
-              and soul into every project, ensuring that our clients get nothing but the best.
+              At InkspireFolio, design is more than a service — it’s our passion. With a commitment to creativity, innovation, and precision, we craft solutions tailored to every client’s unique needs. From concept to execution, we dedicate ourselves fully to each project, ensuring work that inspires, connects, and delivers real impact.
             </p>
           </div>
         </div>
@@ -38,14 +36,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-ink-black">Designing Beyond Boundaries</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-ink-black">Designing Without Limits</h2>
               <p className="text-lg text-charcoal-gray leading-relaxed">
-                At Global Design Agency, we believe in pushing creative boundaries. We are a passionate team of
-                designers, developers, and marketers dedicated to bringing your vision to life. With a focus on
-                innovation and excellence, we strive to exceed expectations and deliver tailored solutions that resonate
-                with your audience. Whether you're a startup looking to establish your brand or an established business
-                seeking a fresh perspective, we're here to help you navigate the ever-evolving digital landscape. Let's
-                collaborate and create something extraordinary together!
+                Welcome to InkspireFolio, where imagination meets strategy. We are a team of creative thinkers, designers, and storytellers dedicated to shaping ideas into powerful visual experiences. With a focus on originality and excellence, we go beyond expectations to deliver solutions that resonate with audiences and elevate brands. Whether you’re a startup building your identity or an established business refreshing your presence, we’re here to help you create work that truly stands out.
               </p>
             </div>
 
@@ -73,15 +66,9 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-6 order-1 lg:order-2">
-              <h2 className="text-3xl lg:text-4xl font-bold text-ink-black">Discover Your Design Potential</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-ink-black">Unleashing Creative Potential</h2>
               <p className="text-lg text-charcoal-gray leading-relaxed">
-                At Global Design Agency, our mission is to revolutionize digital experiences through inspired design
-                solutions. We empower clients by fostering creativity, forging connections, and surpassing expectations,
-                ensuring they stand out in a competitive landscape. Our collaborative approach combines strategic
-                thinking, innovative design, and seamless execution, creating impactful brand experiences that drive
-                inspiring creativity, and driving digital transformation. At Global Design Agency, we see a future where
-                our exceptional design experiences empower businesses and individuals to thrive and leave a lasting
-                impact.
+                At InkspireFolio, our mission is to transform ideas into experiences that inspire and engage. We empower clients through innovative design, authentic storytelling, and a vision-driven approach that helps them thrive in a competitive market. Our goal is to set new standards in creative excellence, driving transformation and leaving a lasting impression through every project we deliver.
               </p>
             </div>
           </div>
@@ -96,15 +83,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-ink-black">Meet Our Dynamic Design Crew</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-ink-black">Meet the InkspireFolios Team</h2>
               <p className="text-lg text-charcoal-gray leading-relaxed">
-                Step into the world of Global Design Agency, where creativity flourishes and innovation thrives. Meet
-                the family behind the brand – a close-knit team of passionate creatives and tech enthusiasts united by
-                our mission to redefine digital experiences. From seasoned designers to brilliant developers and savvy
-                marketers, we bring diverse perspectives to every project, ensuring a fresh and dynamic approach.
-                Together, we collaborate seamlessly to bring your vision to life, crafting designs that not only
-                captivate and inspire. Get to know the brilliant minds driving our design magic and join us on a journey
-                of creativity, innovation, and boundless possibilities.
+                Behind InkspireFolio is a passionate team of designers, editors, and creative minds who believe in the power of storytelling through design. Together, we bring diverse skills and perspectives to craft unique, impactful solutions for every project. With collaboration at our core, we translate visions into designs that captivate and inspire. Meet the people who bring ideas to life — the driving force behind our creativity, innovation, and success.
               </p>
             </div>
 

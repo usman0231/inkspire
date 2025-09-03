@@ -1,4 +1,8 @@
 {
-  "/page": "app/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/services/logo-design/page": "app/services/logo-design/page.js",
+  "/services/business/page": "app/services/business/page.js",
+  "/services/video_editing/page": "app/services/video_editing/page.js",
+  "/services/content_writing/page": "app/services/content_writing/page.js",
+  "/services/book_cover/page": "app/services/book_cover/page.js",
+  "/reviews/page": "app/reviews/page.js"
 }

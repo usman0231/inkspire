@@ -2,8 +2,193 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { FileText, ImageIcon, Layers, Gift } from "lucide-react"
 import Progress from "@/components/progress"
+import Number from "../number"
+import ContactForm from "../contactform"
+import ContactButton from '../contact_button'
 
-export default function LogoDesignPage() {
+type PortfolioType = "image" | "video" | "text"
+
+type PortfolioItemT = {
+  type: PortfolioType
+  // for image/video
+  src?: string
+  alt?: string
+  poster?: string
+  // for text
+  title?: string
+  subtitle?: string
+  bg?: string // Tailwind color classes e.g., "bg-gray-100"
+  textColor?: string // Tailwind text color e.g., "text-charcoal-gray"
+}
+
+export default function bookcover() {
+
+  // Book Cover
+  const heading = "Book Cover Design"
+  const banner_text = "Make your book impossible to ignore with a cover that captivates."
+  const service_type = "Designs That Tell Your Story at First Glance"
+  const service_para = " At InkspireFolio, we craft book covers that capture the essence of your story and spark interest at first sight. Our team blends striking visuals, typography, and layout design to ensure your book not only looks professional but also connects with readers emotionally."
+  const Portfolio_heading = "Book Cover Portfolio"
+  const Portfolio_para = "Each design is tailored to reflect your vision, making your book unforgettable both online and on shelves."
+  const banner_img = "url(/logoDesign/banner.jpg)"
+  const section_right_logo =
+    "https://globaldesignsagency.com/assets/images/services/first-section/logo.png"
+
+  const transforming_heading = "";
+  const transforming_text = "";
+
+  // --- SMART PORTFOLIO DATA (JSON-like array) ---
+  const portfolioData: PortfolioItemT[] = [
+    // VIDEO
+    // {
+    //   type: "video",
+    //   src: "/portfolio/reel-01.mp4",
+    //   poster: "/portfolio/reel-01.jpg",
+    //   alt: "Brand reel 01",
+    // },
+    // IMAGE EXAMPLES
+    // {
+    //   type: "image",
+    //   src: "/portfolio/logo-mountaineering.png",
+    //   alt: "Mountaineering Logo",
+    // },
+    // TEXT EXAMPLES
+    {
+      type: "text",
+      title: "HEAD TO TAILS",
+      subtitle: "GROOMING • CARE • LOVE",
+      bg: "bg-gray-50",
+      textColor: "text-charcoal-gray",
+    },
+    {
+      type: "text",
+      title: "MINDS",
+      subtitle: "FESTIVAL",
+      bg: "bg-charcoal-gray",
+      textColor: "text-white",
+    },
+    {
+      type: "text",
+      title: "Casa Mia",
+      subtitle: "ITALIAN RESTAURANT",
+      bg: "bg-gray-100",
+      textColor: "text-charcoal-gray",
+    },
+    {
+      type: "text",
+      title: "HEAD TO TAILS",
+      subtitle: "GROOMING • CARE • LOVE",
+      bg: "bg-gray-50",
+      textColor: "text-charcoal-gray",
+    },
+    {
+      type: "text",
+      title: "MINDS",
+      subtitle: "FESTIVAL",
+      bg: "bg-charcoal-gray",
+      textColor: "text-white",
+    },
+    {
+      type: "text",
+      title: "Casa Mia",
+      subtitle: "ITALIAN RESTAURANT",
+      bg: "bg-gray-100",
+      textColor: "text-charcoal-gray",
+    },
+    {
+      type: "text",
+      title: "HEAD TO TAILS",
+      subtitle: "GROOMING • CARE • LOVE",
+      bg: "bg-gray-50",
+      textColor: "text-charcoal-gray",
+    },
+    {
+      type: "text",
+      title: "MINDS",
+      subtitle: "FESTIVAL",
+      bg: "bg-charcoal-gray",
+      textColor: "text-white",
+    },
+    {
+      type: "text",
+      title: "Casa Mia",
+      subtitle: "ITALIAN RESTAURANT",
+      bg: "bg-gray-100",
+      textColor: "text-charcoal-gray",
+    },
+    // Mix more as needed…
+  ]
+
+  // --- RENDER HELPERS ---
+  const PortfolioItem = ({ item }: { item: PortfolioItemT }) => {
+    const baseBox =
+      "relative flex items-center justify-center min-h-[300px] overflow-hidden"
+
+    if (item.type === "video" && item.src) {
+      return (
+        <div className={`${baseBox} bg-black`}>
+          <video
+            className="w-full h-full object-cover"
+            src={item.src}
+            poster={item.poster}
+            playsInline
+            muted
+            loop
+            autoPlay
+            preload="none"
+          />
+          {item.alt ? (
+            <span className="sr-only">{item.alt}</span>
+          ) : null}
+        </div>
+      )
+    }
+
+    if (item.type === "image" && item.src) {
+      return (
+        <div className={`${baseBox} bg-gray-100`}>
+          {/* If you prefer next/image, swap this for <Image /> */}
+          <img
+            src={item.src}
+            alt={item.alt || "Portfolio image"}
+            className="max-w-full max-h-full object-contain"
+            loading="lazy"
+          />
+        </div>
+      )
+    }
+
+    // TEXT
+    return (
+      <div
+        className={`${baseBox} ${
+          item.bg || "bg-gray-200"
+        } text-center p-12`}
+      >
+        <div className="space-y-2">
+          {item.title ? (
+            <h3
+              className={`font-bold text-2xl ${
+                item.textColor || "text-charcoal-gray"
+              }`}
+            >
+              {item.title}
+            </h3>
+          ) : null}
+          {item.subtitle ? (
+            <p
+              className={`text-sm opacity-80 ${
+                item.textColor || "text-charcoal-gray"
+              }`}
+            >
+              {item.subtitle}
+            </p>
+          ) : null}
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -11,7 +196,7 @@ export default function LogoDesignPage() {
       {/* Hero Banner Section */}
       <section
         className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url(https://globaldesignsagency.com/assets/images/services/logo-design.png)" }}
+        style={{ backgroundImage: banner_img }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-20 flex items-center min-h-screen">
@@ -19,59 +204,15 @@ export default function LogoDesignPage() {
             {/* Left Content */}
             <div className="text-white">
               <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-                Crafting Iconic <span className="text-warm-orange">Logo</span> That Define Your Brand
+                {heading}
               </h1>
               <p className="text-lg text-gray-200 mb-8 leading-relaxed">
-                At Global Design Agency, we specialize in creating iconic logos that not only represent your brand but
-                also resonate with your audience. Our expert designers combine creativity and strategic thinking to
-                craft logos that leave a lasting impression and help you stand out from the competition. Let us help you
-                make a lasting impact with a logo that truly represents your brand.
+                {banner_text}
               </p>
             </div>
 
             {/* Right Contact Form */}
-            <div className="bg-[var(--light-bg)] from-warm-orange via-warm-orange to-warm-orange/80 rounded-2xl p-8 shadow-2xl">
-              <div className="text-center mb-6">
-                <h3 className="text-xl font-semibold text-white">We will always provide the best service.</h3>
-              </div>
-
-              <form className="space-y-4">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full px-4 py-3 bg-white/90 border-0 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full px-4 py-3 bg-white/90 border-0 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    className="w-full px-4 py-3 bg-white/90 border-0 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    placeholder="I am looking for..."
-                    rows={4}
-                    className="w-full px-4 py-3 bg-white/90 border-0 rounded-lg focus:outline-none focus:ring-2 focus:ring-white resize-none placeholder-gray-500"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-warm-orange text-white py-3 rounded-lg font-bold text-lg hover:bg-warm-orange/90 transition-colors border-2 border-warm-orange hover:border-warm-orange/90"
-                >
-                  SUBMIT
-                </button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
@@ -82,19 +223,11 @@ export default function LogoDesignPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div>
-              <h2 className="text-4xl font-bold text-charcoal-gray mb-6">Logo Design</h2>
+              <h2 className="text-4xl font-bold text-charcoal-gray mb-6">
+                {service_type}
+              </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Capture the essence of your brand with our bespoke logo design service. In today's dynamic market, a
-                distinctive logo is the cornerstone of your brand identity, serving as the visual ambassador that
-                communicates your values, mission, and unique selling proposition to your target audience.
-              </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Our seasoned creatives, we tailor our approach to meet your unique requirements, from minimalist and
-                modern to intricate and illustrative, we curate to fit your brand's personality. Whether you're a
-                startup looking to make a memorable first impression or an established business seeking a fresh rebrand,
-                our collaborative process ensures that your logo is not only visually striking but also strategically
-                aligned to stand out in a competitive marketplace, we deliver timeless designs that resonate with your
-                audience. Elevate your brand identity with our unparalleled logo design expertise.
+                {service_para}
               </p>
               <button className="bg-warm-orange text-white px-8 py-3 rounded-lg font-semibold hover:bg-warm-orange/90 transition-colors">
                 Get Quote
@@ -104,7 +237,7 @@ export default function LogoDesignPage() {
             {/* Right Image */}
             <div className="flex justify-center">
               <img
-                src="https://globaldesignsagency.com/assets/images/services/first-section/logo.png"
+                src={section_right_logo}
                 alt="Logo Design Process"
                 className="max-w-full h-auto"
               />
@@ -117,143 +250,47 @@ export default function LogoDesignPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal-gray mb-4">Logo Portfolio</h2>
+            <h2 className="text-4xl font-bold text-charcoal-gray mb-4">
+              {Portfolio_heading}
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              In the virtual world teeming with competition, we understand the importance of standing out. We prioritize
-              quality over quantity in every order. Your satisfaction is our driving force, ensuring confidence with
-              every project.
+              {Portfolio_para}
             </p>
           </div>
 
-          {/* Portfolio Grid */}
+          {/* SMART Portfolio Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
-            {/* Portfolio items with different background colors */}
-            <div className="bg-gray-100 p-12 flex items-center justify-center min-h-[300px]">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-charcoal-gray rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white font-bold">M</span>
-                </div>
-                <h3 className="font-bold text-charcoal-gray">MOUNTAINEERING</h3>
-                <p className="text-sm text-gray-600">ADVENTURE COMPANY</p>
-              </div>
-            </div>
-
-            <div className="bg-charcoal-gray p-12 flex items-center justify-center min-h-[300px]">
-              <div className="text-center">
-                <div className="text-purple-400 text-4xl font-bold mb-2">★</div>
-                <h3 className="font-bold text-white">SEED STAR</h3>
-              </div>
-            </div>
-
-            <div className="bg-teal-800 p-12 flex items-center justify-center min-h-[300px]">
-              <div className="text-center">
-                <div className="w-12 h-12 border-2 border-white mx-auto mb-4"></div>
-                <h3 className="font-bold text-white">THE EMERALD</h3>
-                <p className="text-sm text-gray-300">CONSULTING GROUP</p>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-12 flex items-center justify-center min-h-[300px]">
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full border-2 border-charcoal-gray mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-charcoal-gray">♀</span>
-                </div>
-                <h3 className="font-bold text-charcoal-gray">HEAD TO TAILS</h3>
-              </div>
-            </div>
-
-            <div className="bg-charcoal-gray p-12 flex items-center justify-center min-h-[300px]">
-              <div className="text-center">
-                <div className="text-purple-400 text-2xl font-bold mb-2">MINDS</div>
-                <h3 className="font-bold text-white">FESTIVAL</h3>
-              </div>
-            </div>
-
-            <div className="bg-gray-100 p-12 flex items-center justify-center min-h-[300px]">
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full border-2 border-charcoal-gray mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-charcoal-gray">♀</span>
-                </div>
-                <h3 className="font-bold text-charcoal-gray text-2xl italic">Casa Mia</h3>
-                <p className="text-sm text-gray-600">ITALIAN RESTAURANT</p>
-              </div>
-            </div>
-
-            <div className="bg-gray-200 p-12 flex items-center justify-center min-h-[300px]">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-charcoal-gray rounded mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white">🏃</span>
-                </div>
-                <h3 className="font-bold text-charcoal-gray">running and stuff</h3>
-              </div>
-            </div>
-
-            <div className="bg-red-900 p-12 flex items-center justify-center min-h-[300px]">
-              <div className="text-center">
-                <h3 className="font-bold text-white text-xl">APOCALYPSE</h3>
-                <h3 className="font-bold text-white text-xl">DAWN</h3>
-              </div>
-            </div>
-
-            <div className="bg-gray-100 p-12 flex items-center justify-center min-h-[300px]">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-warm-orange rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white">🎭</span>
-                </div>
-                <h3 className="font-bold text-charcoal-gray">Comedic</h3>
-                <h3 className="font-bold text-gray-500">CHAMELEON</h3>
-              </div>
-            </div>
-
-            <div className="bg-gray-100 p-12 flex items-center justify-center min-h-[300px]">
-              <div className="text-center">
-                <h3 className="font-bold text-charcoal-gray">COMPANIONS</h3>
-                <p className="text-sm text-gray-600">PET CARE & WALKS</p>
-              </div>
-            </div>
-
-            <div className="bg-yellow-200 p-12 flex items-center justify-center min-h-[300px]">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-charcoal-gray rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white">⚡</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-charcoal-gray p-12 flex items-center justify-center min-h-[300px]">
-              <div className="text-center">
-                <h3 className="font-bold text-white">BLACK FORGE</h3>
-              </div>
-            </div>
+            {portfolioData.map((item, idx) => (
+              <PortfolioItem key={idx} item={item} />
+            ))}
           </div>
         </div>
       </section>
 
       {/* Progress Section */}
-      <Progress/>
+      <Progress />
 
       {/* Transforming Visions Section */}
       <section
         className="py-20 bg-white relative overflow-hidden"
         style={{
-          backgroundImage: "url(https://globaldesignsagency.com/assets/images/call-background.png)",
+          backgroundImage:
+            "url(https://globaldesignsagency.com/assets/images/call-background.png)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-charcoal-gray mb-6">Transforming Visions into Brands</h2>
-          <p className="text-charcoal-gray mb-12 max-w-3xl mx-auto text-lg leading-relaxed">
-            We do not tell you our story. We write it together. Partnering with us means a seat at the table where you
-            will be heard.
+          <h2 className="text-4xl lg:text-5xl font-bold text-charcoal-gray mb-6">
+            {transforming_heading}
+          </h2>
+        <p className="text-charcoal-gray mb-12 max-w-3xl mx-auto text-lg leading-relaxed">
+            {transforming_text}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button className="bg-flame-orange text-white px-8 py-4 rounded-full font-semibold hover:bg-flame-orange/90 transition-colors text-lg">
-              Contact us Now!
-            </button>
-
+            <ContactButton/>
             <div className="flex items-center gap-3 text-charcoal-gray">
               <div className="w-12 h-12 bg-flame-orange rounded-full flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -262,7 +299,7 @@ export default function LogoDesignPage() {
               </div>
               <div className="text-left">
                 <p className="text-sm text-charcoal-gray/70">Call Us 24/7</p>
-                <p className="font-bold text-lg text-charcoal-gray">187-786-27665</p>
+                <p className="font-bold text-lg text-charcoal-gray"><Number/></p>
               </div>
             </div>
           </div>

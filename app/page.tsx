@@ -236,7 +236,7 @@ export default function HomePage() {
           className="absolute inset-0 bg-center bg-no-repeat flex flex-col items-center justify-center"
           style={{ backgroundImage: "url(/home_page/banner.jpg)", backgroundSize: "100% 100%"  }}
         >
-          <h1 className="text-warm-white text-3xl md:text-6xl font-bold">Design a Digital Identity That Reflects You</h1>
+          <h1 className="text-warm-white text-xl md:text-3xl lg:text-5xl xl:text-6xl font-bold">Design a Digital Identity That Reflects You</h1>
         </div>
       </section>
 
@@ -455,7 +455,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="font-semibold text-ink-black">Call Us 24/7</div>
-                    <div className="font-bold text-flame-orange">197-785-27685</div>
+                    <div className="font-bold text-flame-orange">+1 3136127389</div>
                   </div>
                 </div>
               </div>

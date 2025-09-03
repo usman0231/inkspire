@@ -82,18 +82,18 @@ export default function Header() {
                     ></lord-icon>,
       href: "/services/animation",
      },
-    {
-      name: "Business marketing",
-      description: "Let us unlock your brand's potential using our unique approach",
-      icon: <lord-icon
-                        src="https://cdn.lordicon.com/lbcxnxti.json"
-                        trigger="loop"
-                        delay="2000"
-                        colors="primary:#2C2C2C,secondary:#2C2C2C"
-                        style={{ width: "60px", height: "60px" }}
-                    ></lord-icon>,
-      href: "/services/business",
-    },
+    // {
+    //   name: "Business marketing",
+    //   description: "Let us unlock your brand's potential using our unique approach",
+    //   icon: <lord-icon
+    //                     src="https://cdn.lordicon.com/lbcxnxti.json"
+    //                     trigger="loop"
+    //                     delay="2000"
+    //                     colors="primary:#2C2C2C,secondary:#2C2C2C"
+    //                     style={{ width: "60px", height: "60px" }}
+    //                 ></lord-icon>,
+    //   href: "/services/business",
+    // },
     { name: "Social Media",
       description: "Promote your brand across a variety of platforms",
       icon: <lord-icon

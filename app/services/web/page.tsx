@@ -2,6 +2,8 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { FileText, ImageIcon, Layers, Gift } from "lucide-react"
 import Progress from "@/components/progress"
+import Number from "../number"
+import ContactForm from "../contactform"
 
 export default function LogoDesignPage() {
   return (
@@ -11,7 +13,7 @@ export default function LogoDesignPage() {
       {/* Hero Banner Section */}
       <section
         className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url(https://globaldesignsagency.com/assets/images/services/logo-design.png)" }}
+        style={{ backgroundImage: "url(/logoDesign/banner.jpg)" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-20 flex items-center min-h-screen">
@@ -19,59 +21,15 @@ export default function LogoDesignPage() {
             {/* Left Content */}
             <div className="text-white">
               <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-                Crafting Iconic <span className="text-warm-orange">Logo</span> That Define Your Brand
+                Web Design & Development
               </h1>
               <p className="text-lg text-gray-200 mb-8 leading-relaxed">
-                At Global Design Agency, we specialize in creating iconic logos that not only represent your brand but
-                also resonate with your audience. Our expert designers combine creativity and strategic thinking to
-                craft logos that leave a lasting impression and help you stand out from the competition. Let us help you
-                make a lasting impact with a logo that truly represents your brand.
+                Turn visitors into loyal customers with a website that works beautifully.
               </p>
             </div>
 
             {/* Right Contact Form */}
-            <div className="bg-[var(--light-bg)] from-warm-orange via-warm-orange to-warm-orange/80 rounded-2xl p-8 shadow-2xl">
-              <div className="text-center mb-6">
-                <h3 className="text-xl font-semibold text-white">We will always provide the best service.</h3>
-              </div>
-
-              <form className="space-y-4">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full px-4 py-3 bg-white/90 border-0 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full px-4 py-3 bg-white/90 border-0 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    className="w-full px-4 py-3 bg-white/90 border-0 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-500"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    placeholder="I am looking for..."
-                    rows={4}
-                    className="w-full px-4 py-3 bg-white/90 border-0 rounded-lg focus:outline-none focus:ring-2 focus:ring-white resize-none placeholder-gray-500"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-warm-orange text-white py-3 rounded-lg font-bold text-lg hover:bg-warm-orange/90 transition-colors border-2 border-warm-orange hover:border-warm-orange/90"
-                >
-                  SUBMIT
-                </button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
@@ -82,19 +40,9 @@ export default function LogoDesignPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div>
-              <h2 className="text-4xl font-bold text-charcoal-gray mb-6">Logo Design</h2>
+              <h2 className="text-4xl font-bold text-charcoal-gray mb-6">Your Vision, Our Code — Designing Digital Experiences That Convert</h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Capture the essence of your brand with our bespoke logo design service. In today's dynamic market, a
-                distinctive logo is the cornerstone of your brand identity, serving as the visual ambassador that
-                communicates your values, mission, and unique selling proposition to your target audience.
-              </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Our seasoned creatives, we tailor our approach to meet your unique requirements, from minimalist and
-                modern to intricate and illustrative, we curate to fit your brand's personality. Whether you're a
-                startup looking to make a memorable first impression or an established business seeking a fresh rebrand,
-                our collaborative process ensures that your logo is not only visually striking but also strategically
-                aligned to stand out in a competitive marketplace, we deliver timeless designs that resonate with your
-                audience. Elevate your brand identity with our unparalleled logo design expertise.
+                At InkspireFolio, we design and develop websites that seamlessly blend creativity with functionality. Our expert team crafts responsive, user-friendly, and visually engaging sites tailored to your goals. From polished interfaces to smooth performance, we prioritize user experience to maximize engagement and growth.
               </p>
               <button className="bg-warm-orange text-white px-8 py-3 rounded-lg font-semibold hover:bg-warm-orange/90 transition-colors">
                 Get Quote
@@ -117,11 +65,9 @@ export default function LogoDesignPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal-gray mb-4">Logo Portfolio</h2>
+            <h2 className="text-4xl font-bold text-charcoal-gray mb-4">Web Portfolio</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              In the virtual world teeming with competition, we understand the importance of standing out. We prioritize
-              quality over quantity in every order. Your satisfaction is our driving force, ensuring confidence with
-              every project.
+              Every project is developed with clean code, optimized performance, and scalable solutions — ensuring your digital presence makes a powerful impact.
             </p>
           </div>
 
@@ -262,7 +208,7 @@ export default function LogoDesignPage() {
               </div>
               <div className="text-left">
                 <p className="text-sm text-charcoal-gray/70">Call Us 24/7</p>
-                <p className="font-bold text-lg text-charcoal-gray">187-786-27665</p>
+                <p className="font-bold text-lg text-charcoal-gray"><Number/></p>
               </div>
             </div>
           </div>
