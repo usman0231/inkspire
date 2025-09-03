@@ -437,7 +437,7 @@ export default function HomePage() {
               <p className="text-lg text-warm-white leading-relaxed">
                 We listen, you <span className="text-flame-orange font-semibold">lead</span>. Ready to create? We are
                 available at your service 24/7. Let's chat! Call us at:{" "}
-                <span className="font-semibold">172-038-63784</span>
+                <span className="font-semibold">+1 3136127389</span>
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 items-start">

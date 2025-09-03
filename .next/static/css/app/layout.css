@@ -1474,12 +1474,6 @@
   .bg-\[var\(--light-bg\)\] {
     background-color: var(--light-bg);
   }
-  .bg-\[var\(--warm-\)\] {
-    background-color: var(--warm-);
-  }
-  .bg-\[var\(--warm-wh\)\] {
-    background-color: var(--warm-wh);
-  }
   .bg-\[var\(--warm-white\)\] {
     background-color: var(--warm-white);
   }
@@ -1897,9 +1891,6 @@
   }
   .whitespace-nowrap {
     white-space: nowrap;
-  }
-  .text-\[var\(--char\)\] {
-    color: var(--char);
   }
   .text-\[var\(--charcoal-gray\)\] {
     color: var(--charcoal-gray);
