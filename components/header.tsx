@@ -229,7 +229,7 @@ export default function Header() {
                               <a
                                 key={service.name}
                                 href={service.href || "#"}
-                                className="flex items-start gap-3 px-3 py-2 text-sm text-[var(--warm-white)] hover:text-flame-orange rounded-lg hover:bg-flame-orange/5"
+                                className="flex items-start gap-3 px-3 py-2 text-sm text-[var(--warm-white)] bg-flame-orange rounded-lg hover:bg-flame-orange/5"
                                 onClick={() => {
                                   setIsMenuOpen(false)
                                   setIsMobileServicesOpen(false)
