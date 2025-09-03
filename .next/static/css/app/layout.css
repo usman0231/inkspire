@@ -1892,6 +1892,9 @@
   .whitespace-nowrap {
     white-space: nowrap;
   }
+  .text-\[var\(--c\)\] {
+    color: var(--c);
+  }
   .text-\[var\(--cha\)\] {
     color: var(--cha);
   }
@@ -1900,6 +1903,9 @@
   }
   .text-\[var\(--charc\)\] {
     color: var(--charc);
+  }
+  .text-\[var\(--charcoal\)\] {
+    color: var(--charcoal);
   }
   .text-\[var\(--charcoal-gray\)\] {
     color: var(--charcoal-gray);

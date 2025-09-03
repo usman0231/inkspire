@@ -198,7 +198,7 @@ export default function Header() {
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-[var(--warm-white)] hover:text-flame-orange">
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-[var(--charcoal-gray)] hover:text-flame-orange">
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
