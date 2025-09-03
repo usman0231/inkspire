@@ -214,7 +214,7 @@ export default function Header() {
                       <div>
                         <button
                           onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                          className="w-full flex items-center justify-between px-3 py-2 text-sm font-medium text-[var(--warm-white)] hover:text-flame-orange rounded-lg hover:bg-flame-orange/5"
+                          className="w-full flex items-center justify-between px-3 py-2 text-sm font-medium text-[var(--charcoal-gray)] hover:text-flame-orange rounded-lg hover:bg-flame-orange/5"
                         >
                           {item.name}
                           <ChevronDown
@@ -249,7 +249,7 @@ export default function Header() {
                     ) : (
                       <a
                         href={item.href}
-                        className="block px-3 py-2 text-sm font-medium text-[var(--warm-white)] hover:text-flame-orange rounded-lg hover:bg-flame-orange/5"
+                        className="block px-3 py-2 text-sm font-medium text-[var(--charcoal-grayheadr)] hover:text-flame-orange rounded-lg hover:bg-flame-orange/5"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.name}

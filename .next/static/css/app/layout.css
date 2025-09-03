@@ -1892,8 +1892,20 @@
   .whitespace-nowrap {
     white-space: nowrap;
   }
+  .text-\[var\(--cha\)\] {
+    color: var(--cha);
+  }
+  .text-\[var\(--char\)\] {
+    color: var(--char);
+  }
+  .text-\[var\(--charc\)\] {
+    color: var(--charc);
+  }
   .text-\[var\(--charcoal-gray\)\] {
     color: var(--charcoal-gray);
+  }
+  .text-\[var\(--charcoal-grayheadr\)\] {
+    color: var(--charcoal-grayheadr);
   }
   .text-\[var\(--warm-white\)\] {
     color: var(--warm-white);
