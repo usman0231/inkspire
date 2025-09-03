@@ -144,11 +144,12 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-3 md:px-18 py-3">
       <div className="container mx-auto">
-        <div className="bg-[var(--charcoal-gray)] rounded-2xl px-6 py-4 shadow-lg">
+        <div className="bg-[var(--warm-white)] rounded-2xl px-6 py-4 shadow-lg">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <Image src="/logo-10.png" alt="Inkspire Folio" width={180} height={60} className="h-14 w-auto" />
+              <Image src="/logos/logo-01.png" alt="Inkspire Folio" width={180} height={60} className="h-14 w-auto" />
+              <Image src="/logos/logo-03.png" alt="Inkspire Folio" width={180} height={60} className="h-14 w-auto" />
             </div>
 
             {/* Desktop Navigation */}
@@ -159,14 +160,14 @@ export default function Header() {
                     <div className="relative" ref={dropdownRef}>
                       <button
                         onClick={() => setIsServicesOpen(!isServicesOpen)}
-                        className="text-sm font-medium text-[var(--warm-white)] hover:text-flame-orange transition-colors flex items-center gap-1 cursor-pointer"
+                        className="text-sm font-medium text-[var(--charcoal-gray)] hover:text-flame-orange transition-colors flex items-center gap-1 cursor-pointer"
                       >
                         {item.name}
                         <ChevronDown size={16} />
                       </button>
 
                       {isServicesOpen && (
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[800px] bg-[var(--charcoal-gray)] rounded-2xl shadow-xl borde p-6 z-50">
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[800px] bg-[var(--warm-white)] rounded-2xl shadow-xl borde p-6 z-50">
                           <div className="grid grid-cols-3 gap-4">
                             {services.map((service, index) => (
                               <a
@@ -187,7 +188,7 @@ export default function Header() {
                       )}
                     </div>
                   ) : (
-                    <a href={item.href} className="text-sm font-medium text-[var(--warm-white)] hover:text-flame-orange">
+                    <a href={item.href} className="text-sm font-medium text-[var(--charcoal-gray)] hover:text-flame-orange">
                       {item.name}
                     </a>
                   )}

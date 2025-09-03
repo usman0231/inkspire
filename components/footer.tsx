@@ -74,7 +74,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-warm-white/20">
           <div className="mb-4 md:mb-0 flex items-center">
             <div className="rounded-lg p-2 mr-3">
-              <Image src="/logo-06.png" alt="Inkspire Folio" width={120} height={40} className="h-15 w-auto" />
+              <Image src="/logos/logo-08.png" alt="Inkspire Folio" width={120} height={40} className="h-15 w-auto" />
             </div>
           </div>
           <div className="text-sm text-warm-white/60">
