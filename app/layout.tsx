@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   description:
     "Creative digital agency specializing in brand design, web development, and digital marketing solutions.",
   generator: "v0.app",
+  icons:{
+    icon: "/logo-09.png"
+  }
 }
 
 export default function RootLayout({
